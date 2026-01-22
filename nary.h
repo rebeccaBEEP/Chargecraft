@@ -1,5 +1,6 @@
 #ifndef DS_NARY_H
 #define DS_NARY_H
+
 typedef struct NNode {
     int id;
     int items_count;

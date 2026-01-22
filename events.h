@@ -1,5 +1,7 @@
 #ifndef DS_EVENTS_H
 #define DS_EVENTS_H
+#include "queue.h"
+#include "station_index.h"
 
 typedef struct Event {
     int ts;         /* timestamp simulé */
@@ -10,5 +12,10 @@ typedef struct Event {
 
 extern Event DS_EVENTS[];
 extern int   DS_EVENTS_COUNT;
+
+extern Event DS_EVENTS_SCENARIO[];
+extern int   DS_EVENTS_COUNT_SCENARIO;
+
+void process_events(Queue* q, StationIndex* idx);
 
 #endif

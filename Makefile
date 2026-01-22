@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -std=c11 -Wall -Wextra -Werror -O2
 
-OBJS = main.o events.o slist.o queue.o stack.o station_index.o nary.o rules.o csv_loader.o json_loader.o
+OBJS = main.o events.o slist.o queue.o stack.o station_index.o nary.o rules.o csv_loader.o json_loader.o veh_mru.o sanity_check_slots.o scenario.o
 
 all: ev_demo
 

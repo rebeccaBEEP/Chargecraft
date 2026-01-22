@@ -44,6 +44,15 @@ int ds_load_stations_from_csv(const char* path, StationIndex* idx){
         info.slots_free  = atoi(cols[6]);
         info.last_ts     = 0;
 
+        // ------- DEBUG
+        printf("[CSV] station_id=%d power=%d slots=%d price=%d\n",
+            station_id,
+            info.power_kW,
+            info.slots_free,
+            info.price_cents
+        );
+        // ------- DEBUG
+
         si_add(idx, station_id, info);
         inserted++;
     }

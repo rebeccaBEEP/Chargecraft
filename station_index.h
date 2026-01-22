@@ -28,4 +28,33 @@ int  si_to_array(StationNode* r, int* ids, int cap);    /* inorder fill */
 void si_print_sideways(StationNode* r);                 /* debug */
 void si_clear(StationIndex* idx);                       /* postorder free */
 
+// ---------- RANGE-BASED SELECTION QUERIES ----------
+
+/* AVL range from ids */
+int si_range_ids(
+    StationNode* r,
+    int lo,
+    int hi,
+    int* out,
+    int cap
+);
+
+// ---------- AGGREGATION QUERIES (COUNT, METRICS) ----------
+
+/* AVL count stations according to power threshold */
+int si_count_ge_power(StationNode* r, int P);
+
+// ---------- FILTERING FROM RULES ----------
+
+int filter_ids_with_rule(
+    StationNode* r,
+    char* toks[],
+    int n,
+    int* out,
+    int cap,
+    int min_power,
+    int min_slots
+);
+
+
 #endif
